@@ -9,15 +9,15 @@
         <script>
             function onClick() {
                 var status = document.getElementById("status");
-                if (status.innerText == "Door is open") {
+                if (status.innerText == "Door is unlocked") {
                     status.innerText = "Door is locked";
                 } else {
-                    status.innerText = "Door is open";
+                    status.innerText = "Door is unlocked";
                 }
             }
         </script>
         <div>
-            <span id="status">Door is locked</span>
+            <span id="status">Door is unlocked</span>
             <br />
             <button onclick="onClick()"> switch</button>
         <div>
