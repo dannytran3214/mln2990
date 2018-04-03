@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
-        <title> Light Switch </title>
-    </head>
-  
+<html>
+<head>
+<title>Light System</title>  <!-- This will be the page title -->
+</head>
 <body> <!-- All the data in it will be shown on the page -->
-<button id="10" class="led">Toggle Light</button> <!--  This will create the button for pin 10 -->
+<button id="10" class="led">Toggle Pin 10</button> <!--  This will create the button for pin 11 -->
 <script src="jquery.min.js"></script> <!-- This will read the script from the jquery -->
 <script type="text/javascript">
 $(document).ready(function(){
   $(".led").click(function(){
     var p = $(this).attr('id'); // Getting the id value that which pin to toggle, pin 13 or pin 13 or pin 11
     // Sending the request to the ip address of the server with the pin number to toggle the pin                                                                
-    $.get("http://192.168.4.1:80/", {pin:p}); // Sending the get request
+    $.get("http://192.168.169.140:80", {pin:p}); // Sending the get request
   });
 });
 </script>
